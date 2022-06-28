@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                echo 'Running....'
+                echo 'Running in test directory....'
             }
         }
         stage('Deploy') {
