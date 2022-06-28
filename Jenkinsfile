@@ -5,8 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                set 'env'
-            }
+                bat 'set'            }
         }
         stage('Test') {
             steps {
