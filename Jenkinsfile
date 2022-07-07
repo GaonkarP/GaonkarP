@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps {
+            steps {script{
                 echo 'Building..'
                 echo 'test'
                 dir("build"){deleteDir()}
@@ -13,7 +13,7 @@ pipeline {
                 cmd = "pyinstaller ${env.WORKSPACE}/day_detail.py"
                 sh label: 'Build', returnStatus: true, script: cmd
 
-            }
+            }}
         }
         stage('Test') {
             steps {script{
